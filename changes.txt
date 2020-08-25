@@ -1,0 +1,13 @@
+Add this line at the top of the html file of reports:
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+Add this part after the closing tag of table of "Organizations responded"
+
+<div>
+        <a href="http://127.0.0.1:5000/report"><button type="button" class="btn btn-success" style="margin-left: 100px; font-weight: bold; height: 50px;"><i class="fas fa-file-download"></i>&nbsp;Download the Report</button></a>
+</div>
+
+
+Check all the imports in the new python file and copy just the sheet() function and its app route
+
