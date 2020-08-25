@@ -1,0 +1,33 @@
+<div class="row" style="margin-top: 100px; color: white;">
+    <table style="margin-left: 50px; background-color: #fddb3a;  border-radius: 25px; filter: drop-shadow(10px 10px 4px #4444dd);">
+        <td><h1>{{rescnt}}</h1></td>
+        <td><h5>&nbsp;Responses Received</h5></td>
+    </table>
+    <table style="margin-left: 50px; background-color: #fddb3a; border-radius: 25px; filter: drop-shadow(10px 10px 4px #4444dd);">
+        <td><h1>{{orcnt}}</h1></td>
+        <td><h5>&nbsp;Organizations responded</h5></td>
+    </table>
+</div>
+
+<div class="row">
+    <select class="form-control col-lg-3 idform" style="margin-top: 50px; margin-left: 50px;" name="id-select" [(ngModel)]="selid" (change)="getsubs($event)" >
+        <option>Filter by section number</option>
+    </select>
+    <select class="form-control col-lg-3 headform" style="margin-top: 50px; margin-left: 50px;" (change)="getsubsbyhd($event)">
+        <option>Filter by section head</option>
+    </select>
+    <select class="form-control col-lg-3 subform" style="margin-top: 50px;margin-left: 50px;" (change)="getresults($event)">
+        <option>Filter by sub question</option>
+    </select>
+
+</div>
+
+<div class="row" style="margin-top: 50px;"> 
+    <google-chart   *ngIf="pie1 && fone==true && pie1.dataTable.length > 0" [data]="pie1" ></google-chart>
+    <google-chart  *ngIf="pie2 && stwo==true && pie2.dataTable.length > 0" [data]="pie2" ></google-chart>
+    <google-chart  *ngIf="pie3 && tthree==true && pie3.dataTable.length > 0" [data]="pie3" ></google-chart>
+    
+
+</div>
+
+
